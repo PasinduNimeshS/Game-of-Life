@@ -42,7 +42,7 @@ with open('game_of_life.cu', 'w') as f:
 !pip install pycuda
 
 6.Run the Simulation After setting up the kernel and memory allocation on the GPU, the game runs in a loop where each generation of the grid is computed and displayed using Matplotlib.
-# Initialize parameters
+// Initialize parameters
 width, height = 100, 100  # Dimensions of the grid
 ...
 The simulation will run until interrupted by the user.
