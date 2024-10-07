@@ -37,13 +37,21 @@ Ensure that your system has a CUDA-capable GPU.
 cuda_code = """
 
 extern "C"
+
 __global__ void update(int *current, int *next, int width, int height) {
+
     int x = blockIdx.x * blockDim.x + threadIdx.x;
+    
     int y = blockIdx.y * blockDim.y + threadIdx.y;
+    
     ...
+    
 }
+
 """
+
 with open('game_of_life.cu', 'w') as f:
+
     f.write(cuda_code)
 
 4.Compile the CUDA Kernel
